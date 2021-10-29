@@ -1,0 +1,16 @@
+.form {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.form input {
+  width: auto;
+  height: 30px;
+  margin: 10px;
+}
+
+.button {
+  width: auto;
+  height: 40px;
+  margin: 10px;
+}
