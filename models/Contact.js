@@ -16,27 +16,110 @@ const ContactSchema = new Schema({
   },
   address: {
     home: {
-      type: String,
+      s_name: {
+        type: String,
+      },
+      s_number: {
+        type: String,
+      },
+      a_number: {
+        type: String,
+      },
+      city: {
+        type: String,
+      },
+      p_code: {
+        type: String,
+      },
+      country: {
+        type: String,
+      },
     },
     work: {
-      type: String,
+      s_name: {
+        type: String,
+      },
+      s_number: {
+        type: String,
+      },
+      a_number: {
+        type: String,
+      },
+      city: {
+        type: String,
+      },
+      p_code: {
+        type: String,
+      },
+      country: {
+        type: String,
+      },
     },
     other: {
-      type: String,
+      s_name: {
+        type: String,
+      },
+      s_number: {
+        type: String,
+      },
+      a_number: {
+        type: String,
+      },
+      city: {
+        type: String,
+      },
+      p_code: {
+        type: String,
+      },
+      country: {
+        type: String,
+      },
     },
   },
   phone: {
     home: {
-      type: String,
+      c_code: {
+        type: String,
+      },
+      number: {
+        type: String,
+      },
+      a_code: {
+        type: String,
+      },
     },
     work: {
-      type: String,
+      c_code: {
+        type: String,
+      },
+      number: {
+        type: String,
+      },
+      a_code: {
+        type: String,
+      },
     },
     mobile: {
-      type: String,
+      c_code: {
+        type: String,
+      },
+      number: {
+        type: String,
+      },
+      a_code: {
+        type: String,
+      },
     },
     fax: {
-      type: String,
+      c_code: {
+        type: String,
+      },
+      number: {
+        type: String,
+      },
+      a_code: {
+        type: String,
+      },
     },
   },
 });

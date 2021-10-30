@@ -32,10 +32,10 @@ router.post(
           other: req.body.address.other,
         },
         phone: {
-          home: req.body.address.home,
-          work: req.body.address.work,
-          mobile: req.body.address.other,
-          fax: req.body.address.fax,
+          home: req.body.phone.home,
+          work: req.body.phone.work,
+          mobile: req.body.phone.mobile,
+          fax: req.body.phone.fax,
         },
       });
 

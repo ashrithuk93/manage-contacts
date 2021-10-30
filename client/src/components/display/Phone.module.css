@@ -1,0 +1,20 @@
+.display {
+  margin: 5px;
+}
+
+.display table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: auto;
+  border: 1px solid #ddd;
+}
+
+.display td {
+  text-align: left;
+  padding: 8px;
+  width: 50%;
+}
+
+.display tr:nth-child(even) {
+  background-color: #f2f2f2;
+}

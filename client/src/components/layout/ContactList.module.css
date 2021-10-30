@@ -1,0 +1,34 @@
+.display {
+  margin: 5px;
+  width: 50%;
+}
+
+.display table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: auto;
+  border: 1px solid #ddd;
+  margin: 5px;
+}
+
+.display td {
+  text-align: left;
+  padding: 8px;
+  width: auto;
+  border: 1px solid rgb(207, 205, 205);
+}
+
+.display th {
+  text-align: left;
+  padding: 8px;
+  width: 100%;
+  border: 1px solid rgb(207, 205, 205);
+}
+
+.display tr:hover {
+  background-color: beige;
+}
+
+.display tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
