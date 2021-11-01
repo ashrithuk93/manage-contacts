@@ -3,14 +3,18 @@ import { useState, Fragment } from "react";
 import Address from "../display/Address";
 import Phone from "../display/Phone";
 import { connect } from "react-redux";
+import { loadOneContact } from "../actions/contacts";
 import PropTypes from "prop-types";
 
-const ContactInfo = ({ contacts }) => {
+const ContactInfo = ({ contacts, loadOneContact }) => {
   const [edit, setEdit] = useState(false);
   const params = useParams();
   const user = contacts.filter((user) => user._id === params.id);
 
-  console.log(user, "from redux");
+  const editHandler = async (id) => {
+    await loadOneContact(id);
+    setEdit(true);
+  };
 
   if (edit) {
     return <Redirect to={`/edit/${params.id}`} />;
@@ -23,7 +27,10 @@ const ContactInfo = ({ contacts }) => {
         <Fragment>
           <p>
             <b>Name:</b> {user[0].fName} {user[0].mName} {user[0].lName}
-            <span style={{ paddingLeft: "10px" }} onClick={() => setEdit(true)}>
+            <span
+              style={{ paddingLeft: "10px" }}
+              onClick={() => editHandler(user[0]._id)}
+            >
               <i className="fas fa-edit"></i>
               <span className="hide-sm">Edit</span>
             </span>
@@ -35,9 +42,18 @@ const ContactInfo = ({ contacts }) => {
               flexWrap: "wrap",
             }}
           >
-            <Address title="Home" data={user[0].address.home} />
-            <Address title="Work" data={user[0].address.work} />
-            <Address title="Other" data={user[0].address.other} />
+            <Address
+              title="Home"
+              data={user[0].address.home ? user[0].address.home : null}
+            />
+            <Address
+              title="Work"
+              data={user[0].address.work ? user[0].address.work : ""}
+            />
+            <Address
+              title="Other"
+              data={user[0].address.other ? user[0].address.other : ""}
+            />
           </div>
           <h4>Phone:</h4>
           <div style={{ display: "list" }}>
@@ -54,10 +70,11 @@ const ContactInfo = ({ contacts }) => {
 
 ContactInfo.propTypes = {
   contacts: PropTypes.array.isRequired,
+  loadOneContact: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = (state) => ({
   contacts: state.contacts.contacts,
 });
 
-export default connect(mapStateToProps)(ContactInfo);
+export default connect(mapStateToProps, { loadOneContact })(ContactInfo);

@@ -27,15 +27,52 @@ router.post(
         lName: req.body.lName,
         mName: req.body.mName,
         address: {
-          home: req.body.address.home,
-          work: req.body.address.work,
-          other: req.body.address.other,
+          home: {
+            s_name: req.body.address.home.s_name,
+            s_number: req.body.address.home.s_number,
+            a_number: req.body.address.home.a_number,
+            city: req.body.address.home.city,
+            p_code: req.body.address.home.p_code,
+            country: req.body.address.home.country,
+          },
+          work: {
+            s_name: req.body.address.work.s_name,
+            s_number: req.body.address.work.s_number,
+            a_number: req.body.address.work.a_number,
+            city: req.body.address.work.city,
+            p_code: req.body.address.work.p_code,
+            country: req.body.address.work.country,
+          },
+          other: {
+            s_name: req.body.address.other.s_name,
+            s_number: req.body.address.other.s_number,
+            a_number: req.body.address.other.a_number,
+            city: req.body.address.other.city,
+            p_code: req.body.address.other.p_code,
+            country: req.body.address.other.country,
+          },
         },
         phone: {
-          home: req.body.phone.home,
-          work: req.body.phone.work,
-          mobile: req.body.phone.mobile,
-          fax: req.body.phone.fax,
+          home: {
+            c_code: req.body.phone.home.c_code,
+            number: req.body.phone.home.number,
+            a_code: req.body.phone.home.a_code,
+          },
+          work: {
+            c_code: req.body.phone.work.c_code,
+            number: req.body.phone.work.number,
+            a_code: req.body.phone.work.a_code,
+          },
+          mobile: {
+            c_code: req.body.phone.mobile.c_code,
+            number: req.body.phone.mobile.number,
+            a_code: req.body.phone.mobile.a_code,
+          },
+          fax: {
+            c_code: req.body.phone.fax.c_code,
+            number: req.body.phone.fax.number,
+            a_code: req.body.phone.fax.a_code,
+          },
         },
       });
 
@@ -71,15 +108,52 @@ router.post(
         lName: req.body.lName,
         mName: req.body.mName,
         address: {
-          home: req.body.address.home,
-          work: req.body.address.work,
-          other: req.body.address.other,
+          home: {
+            s_name: req.body.address.home.s_name,
+            s_number: req.body.address.home.s_number,
+            a_number: req.body.address.home.a_number,
+            city: req.body.address.home.city,
+            p_code: req.body.address.home.p_code,
+            country: req.body.address.home.country,
+          },
+          work: {
+            s_name: req.body.address.work.s_name,
+            s_number: req.body.address.work.s_number,
+            a_number: req.body.address.work.a_number,
+            city: req.body.address.work.city,
+            p_code: req.body.address.work.p_code,
+            country: req.body.address.work.country,
+          },
+          other: {
+            s_name: req.body.address.other.s_name,
+            s_number: req.body.address.other.s_number,
+            a_number: req.body.address.other.a_number,
+            city: req.body.address.other.city,
+            p_code: req.body.address.other.p_code,
+            country: req.body.address.other.country,
+          },
         },
         phone: {
-          home: req.body.phone.home,
-          work: req.body.phone.work,
-          mobile: req.body.phone.mobile,
-          fax: req.body.phone.fax,
+          home: {
+            c_code: req.body.phone.home.c_code,
+            number: req.body.phone.home.number,
+            a_code: req.body.phone.home.a_code,
+          },
+          work: {
+            c_code: req.body.phone.work.c_code,
+            number: req.body.phone.work.number,
+            a_code: req.body.phone.work.a_code,
+          },
+          mobile: {
+            c_code: req.body.phone.mobile.c_code,
+            number: req.body.phone.mobile.number,
+            a_code: req.body.phone.mobile.a_code,
+          },
+          fax: {
+            c_code: req.body.phone.fax.c_code,
+            number: req.body.phone.fax.number,
+            a_code: req.body.phone.fax.a_code,
+          },
         },
       };
 
